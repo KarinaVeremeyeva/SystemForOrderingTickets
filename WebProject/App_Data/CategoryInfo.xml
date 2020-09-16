@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<ArrayOfCategory>
+  <Category>
+    <Id>1</Id>
+    <Name>Parterre</Name>
+    <TicketPrice>30</TicketPrice>
+    <TotalTickets>10</TotalTickets>
+  </Category>
+  <Category>
+    <Id>2</Id>
+    <Name>Balcony</Name>
+    <TicketPrice>40</TicketPrice>
+    <TotalTickets>12</TotalTickets>
+  </Category>
+  <Category>
+    <Id>3</Id>
+    <Name>Loge</Name>
+    <TicketPrice>20</TicketPrice>
+    <TotalTickets>15</TotalTickets>
+  </Category>
+</ArrayOfCategory>

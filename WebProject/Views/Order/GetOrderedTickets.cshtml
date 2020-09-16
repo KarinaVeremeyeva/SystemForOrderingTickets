@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Ordered tickets";
+}
+@model  List<WebProject.Models.ViewModels.UnpaidOrdersViewModel>
+<h2>Ordered tickets</h2>
+<div>
+    <table class="table table-bordered table-hover">
+        <tbody>
+            <tr>
+                <th>Date</th>
+                <th>Login</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>IsPaid</th>
+            </tr>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td><p>@order.PlayDate.ToShortDateString()</p></td>
+                    <td><p>@order.UserName</p></td>
+                    <td><p>@order.CategoryName</p></td>
+                    <td><p>@order.Quantity</p></td>
+                    <td>
+                        @Html.ActionLink("Mark Order As Paid", "MarkOrderAsPaid", "Order", new { paidOrderId = order.Id }, new { @class = "btn btn-default" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            @Html.ActionLink("Create Report", "CreateReport", "Order", new { @class = "btn btn-default" });
+        </div>
+    </div>
+</div>
