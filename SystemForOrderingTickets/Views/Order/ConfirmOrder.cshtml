@@ -1,0 +1,33 @@
+﻿@model SystemForOrderingTickets.Models.OrderCreateViewModel
+
+@{
+    ViewBag.Title = "Confirm Order";
+}
+
+<h2>Confirm order</h2>
+<div style="display:flex">
+    @using (Html.BeginForm("CreateOrder", "Order", FormMethod.Post))
+    {
+        <div>@Html.HiddenFor(q => q.DateId)</div>
+        <div>@Html.HiddenFor(q => q.LoginId)</div>
+        for (var i = 0; i < Model.Quantities.Count; i++)
+        {
+            var category = Model.Quantities[i];
+            <input name="Quantities[@i][Quantity]" type="hidden" value="@category.Quantity" />
+            <input name="Quantities[@i][CategoryId]" type="hidden" value="@category.CategoryId" />
+        }
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-primary" value="Yes" />
+        </div>
+    }
+    @using (Html.BeginForm("OrdersPageForDate", "Order", FormMethod.Get))
+    {
+        <div>@Html.HiddenFor(q => q.DateId)</div>
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="No" />
+            </div>
+            }
+        </div>
+
+
+

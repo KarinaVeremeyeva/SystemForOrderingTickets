@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Report";
+}
+
+@model  SystemForOrderingTickets.Models.ViewModels.ReportViewModel
+<h2>Report</h2>
+<h4>Statistics of unpaid orders</h4>
+<hr />
+<div>
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th>Category</th>
+                <th>Tickets for category</th>
+                <th>Price for сategory</th>
+            </tr>
+            @foreach (var reportViewModel in Model.Categories)
+            {
+                <tr>
+                    <td><p>@reportViewModel.CategoryName</p></td>
+                    <td><p>@reportViewModel.Quantity</p></td>
+                    <td><p>@reportViewModel.Price</p></td>
+                </tr>
+            }
+            <tr>
+                <th>Total</th>
+                <th>Total tickets count</th>
+                <th>Total tickets price</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>@Model.TotalTicketsCount</td>
+                <td>@Model.TotalTicketsPrice</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
