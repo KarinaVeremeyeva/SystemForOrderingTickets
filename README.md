@@ -1,12 +1,15 @@
 # SystemForOrderingTickets
-Система распространения билетов с разграничением прав доступа.
-## Технологии
-ASP.NET MVC, Entity Framework, MS SQL Server, Bootstrap.
-## Реализованный функционал
-* хранение, добавление и представление данных по пьесам и заказам
-* возможность авторизации в системе
-* выбор пьесы и заказ билетов пользователем и сохранение этих операций в базу данных
-* отображение информации о заказанных и оплаченных билетах
-* отмена выбранного заказа
-* отчёт по неоплаченным заказам в виде статистики по заказам
-* ввод оплат за совершённые заказы для роли курьер
+Ticket distribution system with differentiated access rights.
+## Technologies
+* ASP.NET MVC
+* Entity Framework
+* MS SQL Server
+* Bootstrap
+## Implemented functionality
+* storing, adding and presenting data of plays and orders
+* authorization
+* ordering tickets by user
+* display information about the ordered and paid tickets
+* cancellation of the selected order
+* report about unpaid orders and statistics
+* input of payments for completed orders for the role of a courier
